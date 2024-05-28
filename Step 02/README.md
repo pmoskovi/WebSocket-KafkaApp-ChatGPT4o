@@ -128,13 +128,13 @@ Here is the modified version of the HTML5 application from the provided CodePen 
 
 ## Explanation:
 1. WebSocket Server in Node.js:
-- The WebSocket server is set up to listen for connections and receive messages from the client.
-- You can extend the server to handle the drawing events as needed.
+    - The WebSocket server is set up to listen for connections and receive messages from the client.
+    - You can extend the server to handle the drawing events as needed.
 
 2. HTML5 Application:
-- The canvas element is used for drawing.
-- WebSocket connection is established with the server.
-- On each drawing event (mousemove while the mouse button is pressed), a message containing the drawing coordinates is sent to the WebSocket server.
+    - The canvas element is used for drawing.
+    - WebSocket connection is established with the server.
+    - On each drawing event (mousemove while the mouse button is pressed), a message containing the drawing coordinates is sent to the WebSocket server.
 
 ## Summary:
 By following these steps, the drawing events from the HTML5 application running in the browser are sent to the Node.js server over WebSocket. You can further extend the server to process these events, broadcast them to other clients, or perform any other desired actions.
