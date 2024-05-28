@@ -164,12 +164,12 @@ Update the mirror app to reset the path whenever it receives a `start` or `end` 
 
 ## Explanation:
 **1. HTML5 Drawing App:**
-    - Sends start and end messages to indicate the beginning and end of a drawing session.
-    - Draws locally on the canvas.
+  - Sends start and end messages to indicate the beginning and end of a drawing session.
+  - Draws locally on the canvas.
 
 **2. Mirror HTML5 App:**
-    - Receives start, draw, and end messages.
-    - Resets the path on receiving start and end messages to avoid connecting lines between separate drawing sessions.
+  - Receives start, draw, and end messages.
+  - Resets the path on receiving start and end messages to avoid connecting lines between separate drawing sessions.
 
 This setup ensures that the Mirror HTML5 app correctly handles separate drawing sessions without connecting lines between them.
 
