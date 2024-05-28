@@ -5,7 +5,7 @@
 
 Certainly! To achieve this, you'll need to modify the demo application to send drawing events over a WebSocket connection to your Node.js server. Here's how you can do it:
 
-# 1. Set Up the WebSocket Server in Node.js
+## 1. Set Up the WebSocket Server in Node.js
 
 First, if you haven't already, install the ws library:
 
@@ -43,7 +43,7 @@ Run the WebSocket server:
 node websocket-server.js
 ```
 
-# 2. Modify the HTML5 Application to Send Drawing Events
+## 2. Modify the HTML5 Application to Send Drawing Events
 
 Here is the modified version of the HTML5 application from the provided CodePen link, with WebSocket integration:
 
