@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Application with WebSocket</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Drawing Application with WebSocket</h1>
+  <canvas id="canvas" width="800" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let painting = false;
+
+    // Initialize WebSocket connection
+    const ws = new WebSocket('ws://localhost:8080');
+
+    ws.onopen = () => {
+      console.log('Connected to WebSocket server');
+    };
+
+    ws.onmessage = (event) => {
+      console.log('Received from server:', event.data);
+      // Handle drawing events from the server (if needed)
+    };
+
+    ws.onclose = () => {
+      console.log('Disconnected from WebSocket server');
+    };
+
+    ws.onerror = (error) => {
+      console.error('WebSocket error:', error);
+    };
+
+    const startPosition = (e) => {
+      painting = true;
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      draw(x, y);
+      ws.send(JSON.stringify({ type: 'start', x, y }));
+    };
+
+    const endPosition = () => {
+      painting = false;
+      ctx.beginPath();
+      ws.send(JSON.stringify({ type: 'end' }));
+    };
+
+    const draw = (x, y) => {
+      if (!painting) return;
+
+      ctx.lineWidth = 5;
+      ctx.lineCap = 'round';
+
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+
+      // Send drawing event to WebSocket server
+      if (painting) {
+        ws.send(JSON.stringify({ type: 'draw', x, y }));
+      }
+    };
+
+      canvas.addEventListener('mousedown', startPosition);
+      canvas.addEventListener('mouseup', endPosition);
+      canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      draw(x, y);
+    });
+  </script>
+</body>
+</html>
