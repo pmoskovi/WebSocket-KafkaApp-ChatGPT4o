@@ -11,10 +11,10 @@ Certainly! Here's how you can create a complete solution that involves:
 2. A Node.js WebSocket server that sends drawing messages to a Kafka topic.
 3. Another Node.js WebSocket server that subscribes to the Kafka topic and sends messages to the Mirror HTML5 app.
 
-# Part 1: HTML5 Drawing App
+## Part 1: HTML5 Drawing App
 The HTML5 drawing app remains the same as before, sending drawing events to the WebSocket server.
 
-# Part 2: WebSocket Server with Kafka Producer
+## Part 2: WebSocket Server with Kafka Producer
 This is the existing WebSocket server script that publishes drawing messages to Kafka:
 
 ```
