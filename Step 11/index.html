@@ -13,6 +13,7 @@
 <body>
   <h1>Drawing Application with WebSocket</h1>
   <canvas id="canvas" width="800" height="600"></canvas>
+  <button id="resetButton">RESET</button>
 
   <script>
     const canvas = document.getElementById('canvas');
@@ -71,14 +72,21 @@
       }
     };
 
-      canvas.addEventListener('mousedown', startPosition);
-      canvas.addEventListener('mouseup', endPosition);
-      canvas.addEventListener('mousemove', (e) => {
+    const resetCanvas = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ws.send(JSON.stringify({ type: 'reset' }));
+    };
+
+    canvas.addEventListener('mousedown', startPosition);
+    canvas.addEventListener('mouseup', endPosition);
+    canvas.addEventListener('mousemove', (e) => {
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       draw(x, y);
     });
+
+    document.getElementById('resetButton').addEventListener('click', resetCanvas);
   </script>
 </body>
 </html>
