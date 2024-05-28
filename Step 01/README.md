@@ -1,5 +1,5 @@
 # Prompt 1
-I'd like to connect my HTML5 app (running JavaScript in the browser) with my Node.js app using websocket. Can you help?
+_I'd like to connect my HTML5 app (running JavaScript in the browser) with my Node.js app using websocket. Can you help?_
 
 Certainly! You can use the ws library in Node.js to create a WebSocket server and the built-in WebSocket API in JavaScript to connect from your HTML5 app. Here's how you can set this up:
 
