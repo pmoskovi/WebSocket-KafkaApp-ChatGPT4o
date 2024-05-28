@@ -202,9 +202,9 @@ This is the updated Mirror HTML5 app that listens for messages from the new WebS
 ```
 
 ## Summary:
-1. *HTML5 Drawing App*: Connects to the WebSocket server on port 8080 and sends drawing events.
-2. *WebSocket Producer Server*: Listens for drawing events from the HTML5 app and publishes them to the Kafka topic.
-3. *WebSocket Consumer Server*: Subscribes to the Kafka topic and forwards received messages to connected Mirror HTML5 apps via WebSocket on port 8081.
-4. *Mirror HTML5 App*: Connects to the WebSocket server on port 8081 and mirrors the drawing events received from Kafka.
+1. **HTML5 Drawing App**: Connects to the WebSocket server on port 8080 and sends drawing events.
+2. **WebSocket Producer Server**: Listens for drawing events from the HTML5 app and publishes them to the Kafka topic.
+3. **WebSocket Consumer Server**: Subscribes to the Kafka topic and forwards received messages to connected Mirror HTML5 apps via WebSocket on port 8081.
+4. **Mirror HTML5 App**: Connects to the WebSocket server on port 8081 and mirrors the drawing events received from Kafka.
 
 This setup allows you to draw in one HTML5 app, publish the drawing events to Kafka via a WebSocket server, and then mirror those events in another HTML5 app using another WebSocket server.
