@@ -47,7 +47,7 @@ Here we go…
 
 > _Now let’s create another client that is listening to these messages, and draws on a similar canvas, thus replicating (or mirroring) the drawing from the first HTML5 app._
 
-### [Prompt 4(../../tree/main/Step%2004)]
+### [Prompt 4](../../tree/main/Step%2004)
 
 > _The Mirror HTML5 application doesn’t draw. On the console it displays the following error message:
 Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid JSON at JSON.parse (<anonymous>) at ws.onmessage (indexConsumer.html:30:33)_
@@ -57,11 +57,11 @@ Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid
 >
 > _Can you try to fix this?_
 
-### Prompt 5
+### [Prompt 5](../../tree/main/Step%2005)
 
 > _This is great, it works flawlessly! Now, instead of sending the messages from the Node.js server to the Mirror HTML5 app, I want to publish these messages to my Confluent Cloud Kafka broker. How would I do that? This means, the Mirror app would not render anything._
 
-### Prompt 6
+### [Prompt 6](../../tree/main/Step%2006)
 
 > _Can you create another node.js app that subscribes to the same topic? As the messages arrive from Kafka, I want it to send the messages to the Mirror HTML5 app._
 > 
@@ -69,7 +69,7 @@ Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid
 > 
 > _We’ll have another Node.js websocket app subscribing to the same Kafka topic, consuming those messages, and sending them to the Mirror HTML5 app._
 
-### Prompt 7
+### [Prompt 7](../../tree/main/Step%2007)
 
 > _The Mirroring app shows the following error in the console:_
 > 
@@ -77,18 +77,18 @@ Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid
 > 
 > _Can you help?_
 
-### Prompt 8
+### [Prompt 8](../../tree/main/Step%2008)
 
 > _The mirroring app has one more minor problem. The problem occurs when I lift my mouse (don’t press the mouse button, that is I am not drawing). It connects the last point from the previous drawing with the first point of the new line that I’m drawing. It connects them with a straight line. Can you help me by not drawing a line between these points?_
 
-### Prompt 9
+### [Prompt 9](../../tree/main/Step%2009)
 
 > _My two Node.js files contain secrets that I want to externalize. They use the same secrets: bootstrap server, cloud API key (username), cloud API secret (password), and topic name. The two Node.js files use the same secrets, so this would make my life a lot easier._
 
-### Prompt 10
+### [Prompt 10](../../tree/main/Step%2010)
 
 > _I’d like to add a RESET button to the producer HTML5 app (the one that I’m drawing on). The button should clear the drawing both on the producer and the consumer canvases._
 
-### Prompt 11
+### [Prompt 11](../../tree/main/Step%2011)
 
 > _While the reset message arrives to the Mirror app, the drawing is not cleared._
