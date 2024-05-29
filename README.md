@@ -92,3 +92,29 @@ Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid
 ### [Prompt 11](../../tree/main/Step%2011)
 
 > _While the reset message arrives to the Mirror app, the drawing is not cleared._
+
+`--------------------- >-8 --------------------- 8-< ---------------------`
+
+## Next Steps
+I wanted to keep the app simple for this post, but I have a few ideas to further evolve it:
+
+1. Improve the UI, beautify the app with CSS: Take a screenshot of the current UI and ask the model to suggest CSS improvements to enhance the look and feel. Add features, such as colors, line width, erase, undo, and many more.
+2. Add natural language features, including voice commands that would do the drawing on your behalf.
+3. Merge the consumer and producer HTML5 apps: Combine them into a single app to provide a full collaborative experience. This would allow any client to draw and see the drawings of all other clients, similar to Google Docs but for drawing.
+4. Simplify the back-end architecture: Merge the two Node.js apps into a single one to streamline the code and make the app easier to manage.
+5. Take advantage of Kafka and the persistent message log, and play back the messages; that is re-draw the picture again. Using timestamps associated with each message, you can also speed up or slow down the drawing.
+
+![Simplified Architecture Diagram](DrawingAppDiagram3.png)
+
+## Conclusions
+With the model’s assistance, I ended up with a fully functioning prototype app in about an hour. While it’s far from production-ready, it’s an incredible way to learn about technology without most of the usual frustrations and technical challenges.
+
+I approached this exercise with a clear idea of my goal. I knew how to solve my problem in an event-driven fashion, what technologies I wanted to use on the client and server sides, and how they’d communicate with each other. Additionally, I had an example of a drawing app to guide the model.
+
+On two occasions, the solution provided wasn’t quite right (Prompts 4 and 7). You might wonder why the model produced code with issues. This is an area I expect significant improvements over time. My prompts might have been somewhat vague, or the model might not have had a perfect understanding of my goals.
+
+Despite not focusing on writing any code in this exercise, I effectively used the model’s assistance by providing clear symptoms and error messages when I encountered issues. No need for Googling, browsing StackOverflow, or reading documentation — just simple English prompts.
+
+As someone passionate about sharing and transferring knowledge, I’ve always viewed YouTube as the best tool for democratizing knowledge. This exercise shows that Large Language Models are taking this to the next level, challenging many of our previous assumptions.
+
+We live in a fundamentally different world than just a couple of years ago, and it fills me with excitement — and at the same time gives me some chills, too.
