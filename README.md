@@ -35,19 +35,19 @@ To give you an idea where we’re heading, here you can read all the prompts I p
 
 Here we go…
 
-### [Prompt 1](tree/main/Step%2001)
+### [Prompt 1](../../tree/main/Step%2001)
 
 > _I’d like to connect my HTML5 app (running JavaScript in the browser) with my Node.js app using websocket. Can you help?_
 
-### [Prompt 2](tree/main/Step%2002)
+### [Prompt 2](../../tree/main/Step%2002)
 
 > _Now, I’d like to take this to the next level. I’d like to use the demo application from here as inspiration: https://codepen.io/javascriptacademy-stash/pen/porpeoJ. This will be the HTML5 application running in the browser. I want every drawing event to be sent over websocket to the server. Can you do this?_
 
-### [Prompt 3](tree/main/Step%2003)
+### [Prompt 3](../../tree/main/Step%2003)
 
 > _Now let’s create another client that is listening to these messages, and draws on a similar canvas, thus replicating (or mirroring) the drawing from the first HTML5 app._
 
-### [Prompt 4(tree/main/Step%2004)]
+### [Prompt 4(../../tree/main/Step%2004)]
 
 > _The Mirror HTML5 application doesn’t draw. On the console it displays the following error message:
 Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid JSON at JSON.parse (<anonymous>) at ws.onmessage (indexConsumer.html:30:33)_
