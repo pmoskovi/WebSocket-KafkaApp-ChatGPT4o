@@ -241,8 +241,8 @@ Update the mirror app to clear the canvas when it receives the reset signal:
 ```
 
 ## Summary:
-**1. HTML5 Drawing App**: Added a RESET button that clears the canvas and sends a reset message to the WebSocket server.
-**2. WebSocket Producer Server**: Forwards the reset message to Kafka.
-**3. Mirror HTML5 App**: Clears the canvas when a reset message is received from the WebSocket server.
+1. **HTML5 Drawing App**: Added a RESET button that clears the canvas and sends a reset message to the WebSocket server.
+2. **WebSocket Producer Server**: Forwards the reset message to Kafka.
+3. **Mirror HTML5 App**: Clears the canvas when a reset message is received from the WebSocket server.
 
 This setup ensures that both the producer and consumer canvases are cleared when the RESET button is clicked.
