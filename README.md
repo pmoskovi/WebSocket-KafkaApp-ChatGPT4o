@@ -95,7 +95,7 @@ Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid
 
 ---
 
-_To access the body of the blog post, click Step 01 - Step 11 or ![https://medium.com/@peter.moskovits/cc9b45885f99](read it on medium)._
+_To access the body of the blog post, click Step 01 - Step 11 or ![read it on medium](https://medium.com/@peter.moskovits/cc9b45885f99)._
 
 ---
 
