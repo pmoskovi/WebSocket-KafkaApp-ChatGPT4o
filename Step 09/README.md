@@ -156,7 +156,7 @@ run().catch(console.error);
 
 ## Summary:
 1. **Create a `.env` file** to store your secrets.
-2. **Install the dotenv library** to load environment variables from the .env file.
+2. **Install the dotenv library** to load environment variables from the `.env` file.
 3. **Update your Node.js scripts** to use the environment variables for configuration.
 
 This setup ensures your secrets are managed securely and consistently across both Node.js applications.
