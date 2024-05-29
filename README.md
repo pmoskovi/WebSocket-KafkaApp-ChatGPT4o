@@ -94,9 +94,7 @@ Uncaught SyntaxError: Unexpected token ‘o’, “[object Blob]” is not valid
 > _While the reset message arrives to the Mirror app, the drawing is not cleared._
 
 
-```
-To access the body of the blog post, click Step 01 - Step 11 or ![https://medium.com/@peter.moskovits/cc9b45885f99](read it on medium).
-```
+_To access the body of the blog post, click Step 01 - Step 11 or ![https://medium.com/@peter.moskovits/cc9b45885f99](read it on medium)._
 
 
 ## Next Steps
