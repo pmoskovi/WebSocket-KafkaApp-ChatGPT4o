@@ -239,8 +239,8 @@ run().catch(console.error);
 
 ## Summary
 
-**1. HTML5 Drawing App**: Added a RESET button that clears the canvas and sends a reset message to the WebSocket server.
-**2. WebSocket Producer Server**: Forwards the reset message to Kafka.
-**3. Mirror HTML5 App**: Properly handles the reset message by clearing the canvas when received.
+1. **HTML5 Drawing App**: Added a RESET button that clears the canvas and sends a reset message to the WebSocket server.
+2. **WebSocket Producer Server**: Forwards the reset message to Kafka.
+3. **Mirror HTML5 App**: Properly handles the reset message by clearing the canvas when received.
 
 This setup ensures that both the producer and consumer canvases are cleared when the RESET button is clicked, and the message is properly handled across all components.
